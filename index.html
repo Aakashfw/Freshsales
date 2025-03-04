@@ -13,6 +13,9 @@ chat='true'>
         <label for="name">Name:</label><br>
         <input type="text" id="name" name="name" required><br><br>
 
+      <label for="name">Account Name:</label><br>
+        <input type="text" id="account_name" name="Account_name" required><br><br>
+
         <label for="email">Email:</label><br>
         <input type="email" id="email" name="email" required><br><br>
 
@@ -24,5 +27,19 @@ chat='true'>
     <script>
 document.querySelector("body > form").id = "test";
 </script>
+  <input type="submit" onclick="identify_call()">
+
+    </form>
+
+<script>
+    function identify_call() {
+        var new_contact = {
+            "First name": document.getElementById("name").value,
+            "Email": document.getElementById("email").value,
+            "Mobile": document.getElementById("mobile").value,
+            "company": {
+                "Name": document.getElementById("Account_name").value
+            }
+        };
 </body>
 </html>
